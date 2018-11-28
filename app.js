@@ -9,7 +9,16 @@ app.get("/", function(req, res){
 
 app.get("/wtf/:thing", function(req, res){
     var thing = req.params.thing;
-    res.render("love.ejs", {thing: thing});
+    res.render("love.ejs", {thingVar: thing});
+});
+
+app.get("/posts", function(req, res) {
+  var posts = [
+    {title: "Post 1", author: "Qiwei"},
+    {title: "Post 2", author: "Qiwei2"},
+    {title: "Post 3", author: "Qiwei3"},
+  ]
+  res.render("posts.ejs", {posts: posts});
 });
 
 // this line will be the bottom line of every application

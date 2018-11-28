@@ -1,1 +1,7 @@
-<h1>you fell in love with: <%= thing %></h1>
+<h1>you fell in love with: <%= thingVar %></h1>
+
+
+<%# logics don't need equal sign in ejs %>
+<% if (thingVar.toLowerCase() === "qiwei") { %>
+  <p>Good choice, qiwei is the best</p>
+<% } %>
